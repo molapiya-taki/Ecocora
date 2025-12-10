@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="welcome-text">
+                    <i class="fas fa-shopping-bag"></i>
+                    Welcome to ShopEasy - India's Online Marketplace
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+                    <a href="#"><i class="fas fa-headset"></i> 24x7 Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Shop<span>Easy</span></span>
+                            <span class="tagline">India's Online Store</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for products, brands and more" class="search-input">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <div class="auth-section" id="authSection">
+                        <!-- Will be updated by JS -->
+                    </div>
+                    <div class="cart-section">
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                            <span class="cart-text">Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#mobiles" class="nav-link"><i class="fas fa-mobile-alt"></i> Mobiles</a></li>
+                <li><a href="#electronics" class="nav-link"><i class="fas fa-laptop"></i> Electronics</a></li>
+                <li><a href="#fashion" class="nav-link"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > 
+            <a href="#" id="productCategory">Electronics</a> > 
+            <span id="productTitle">Product Details</span>
+        </div>
+    </div>
+
+    <!-- Product Details -->
+    <main class="product-details">
+        <div class="container">
+            <div class="product-container">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="https://images.unsplash.com/photo-1664478546384-d57ffe74a78c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images" id="thumbnailImages">
+                        <!-- Loaded by JS -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 id="productName">iPhone 14 Pro Max (256GB) - Deep Purple</h1>
+                    
+                    <div class="product-rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-value">4.2</span>
+                            <span class="rating-count">(12,543 ratings)</span>
+                        </div>
+                        <span class="reviews-link">12,543 Reviews</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price" id="currentPrice">₹1,19,999</span>
+                        <span class="original-price" id="originalPrice">₹1,39,999</span>
+                        <span class="discount" id="discount">14% off</span>
+                    </div>
+
+                    <div class="product-offers">
+                        <h3>Available offers</h3>
+                        <ul>
+                            <li><i class="fas fa-tag"></i> Bank Offer: 10% Instant Discount on HDFC Bank Credit Cards</li>
+                            <li><i class="fas fa-tag"></i> Special Price: Get extra ₹5000 off</li>
+                            <li><i class="fas fa-tag"></i> Free Delivery</li>
+                            <li><i class="fas fa-tag"></i> 7 Days Replacement Policy</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-specs">
+                        <h3>Specifications</h3>
+                        <div class="specs-table" id="specsTable">
+                            <!-- Loaded by JS -->
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-add-to-cart" id="addToCartBtn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-buy-now" id="buyNowBtn">
+                            <i class="fas fa-bolt"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="delivery-info">
+                        <h3>Delivery Options</h3>
+                        <div class="delivery-option">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" placeholder="Enter pincode" id="pincodeInput">
+                            <button class="btn btn-check">Check</button>
+                        </div>
+                        <p class="delivery-time">Delivery by 2 days | Free</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Description -->
+            <div class="product-description">
+                <h2>Product Description</h2>
+                <div id="productDescription">
+                    <!-- Loaded by JS -->
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>Similar Products</h2>
+                <div class="products-grid" id="relatedProducts">
+                    <!-- Loaded by JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>POLICY</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 ShopEasy.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2>Login Required</h2>
+            <p>You need to login to add items to cart or make purchases.</p>
+            <div class="modal-actions">
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="signup.html" class="btn btn-secondary">Create Account</a>
+                <button class="btn btn-ghost close-modal-btn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        // Product details specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get product ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || 1;
+            
+            // Load product details
+            loadProductDetails(productId);
+            
+            // Add to cart button
+            document.getElementById('addToCartBtn')?.addEventListener('click', function() {
+                if (!isLoggedIn()) {
+                    document.getElementById('loginModal').style.display = 'flex';
+                    return;
+                }
+                addToCart(productId);
+            });
+            
+            // Buy now button
+            document.getElementById('buyNowBtn')?.addEventListener('click', function() {
+                if (!isLoggedIn()) {
+                    document.getElementById('loginModal').style.display = 'flex';
+                    return;
+                }
+                addToCart(productId);
+                window.location.href = 'checkout.html';
+            });
+        });
+    </script>
+</body>
+</html>

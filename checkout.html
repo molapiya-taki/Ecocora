@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="welcome-text">
+                    <i class="fas fa-shopping-bag"></i>
+                    Welcome to ShopEasy - India's Online Marketplace
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fas fa-headset"></i> 24x7 Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Shop<span>Easy</span></span>
+                            <span class="tagline">India's Online Store</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Checkout Progress -->
+                <div class="checkout-progress">
+                    <div class="progress-step active">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Login</span>
+                    </div>
+                    <div class="progress-step active">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Address</span>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Payment</span>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Confirm</span>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <div class="auth-section" id="authSection">
+                        <!-- Will be updated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Checkout Page -->
+    <main class="checkout-page">
+        <div class="container">
+            <div class="checkout-container">
+                <!-- Delivery Address -->
+                <div class="checkout-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-map-marker-alt"></i> Delivery Address</h2>
+                        <button class="btn btn-add-address" id="addAddressBtn">
+                            <i class="fas fa-plus"></i> Add New Address
+                        </button>
+                    </div>
+                    
+                    <div class="address-list" id="addressList">
+                        <!-- Addresses loaded by JS -->
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="checkout-section">
+                    <h2><i class="fas fa-shopping-bag"></i> Order Summary</h2>
+                    <div class="order-items" id="orderItems">
+                        <!-- Order items loaded by JS -->
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="checkout-section">
+                    <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+                    <div class="payment-methods">
+                        <div class="payment-option selected">
+                            <input type="radio" name="payment" id="cod" checked>
+                            <label for="cod">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Cash on Delivery</span>
+                                <small>Pay when you receive the order</small>
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment" id="card">
+                            <label for="card">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Credit/Debit Card</span>
+                                <small>Pay using your card</small>
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment" id="upi">
+                            <label for="upi">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>UPI</span>
+                                <small>Pay using UPI apps</small>
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment" id="netbanking">
+                            <label for="netbanking">
+                                <i class="fas fa-university"></i>
+                                <span>Net Banking</span>
+                                <small>Pay using net banking</small>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Details -->
+                <div class="checkout-section price-details">
+                    <h2>Price Details</h2>
+                    <div class="price-summary">
+                        <div class="price-row">
+                            <span>Total MRP</span>
+                            <span id="summaryTotal">₹0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Discount on MRP</span>
+                            <span class="discount">-₹0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Delivery Charges</span>
+                            <span class="delivery">₹40</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total Amount</span>
+                            <span id="summaryFinal">₹0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Place Order Button -->
+                <div class="place-order-section">
+                    <button class="btn btn-primary btn-place-order" id="placeOrderBtn">
+                        <i class="fas fa-lock"></i> Place Order
+                    </button>
+                    <p class="secure-payment">
+                        <i class="fas fa-shield-alt"></i>
+                        Your payment is secured with 256-bit SSL encryption
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 ShopEasy.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Address Modal -->
+    <div id="addressModal" class="modal">
+        <div class="modal-content address-modal">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Address</h2>
+            <form id="addressForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="addressName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="addressMobile" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input type="text" id="addressPincode" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address (House No, Building, Street)</label>
+                    <textarea id="addressText" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="locality">Locality/Area</label>
+                    <input type="text" id="addressLocality" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="addressCity" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select id="addressState" class="form-control" required>
+                        <option value="">Select State</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    </select>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" id="defaultAddress">
+                        <span>Make this my default address</span>
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Save Address</button>
+                    <button type="button" class="btn btn-ghost close-modal-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="orderSuccessModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for shopping with ShopEasy</p>
+            <div class="order-details">
+                <p>Order ID: <strong>SHOPEASY-<span id="orderId">123456</span></strong></p>
+                <p>Estimated Delivery: <strong>2-3 business days</strong></p>
+            </div>
+            <div class="modal-actions">
+                <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                <a href="#" class="btn btn-ghost">View Order Details</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

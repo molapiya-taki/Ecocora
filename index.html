@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Online Shopping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="welcome-text">
+                    <i class="fas fa-shopping-bag"></i>
+                    Welcome to ShopEasy - India's Online Marketplace
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Select Location</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+                    <a href="#"><i class="fas fa-headset"></i> 24x7 Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Shop<span>Easy</span></span>
+                            <span class="tagline">India's Online Store</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search for products, brands and more" class="search-input">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions">
+                        <a href="#mobiles">Mobiles</a>
+                        <a href="#laptops">Laptops</a>
+                        <a href="#fashion">Fashion</a>
+                        <a href="#electronics">Electronics</a>
+                        <a href="#home">Home & Kitchen</a>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <div class="auth-section" id="authSection">
+                        <!-- Will be updated by JS -->
+                    </div>
+                    <div class="cart-section">
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                            <span class="cart-text">Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#mobiles" class="nav-link"><i class="fas fa-mobile-alt"></i> Mobiles</a></li>
+                <li><a href="#electronics" class="nav-link"><i class="fas fa-laptop"></i> Electronics</a></li>
+                <li><a href="#fashion" class="nav-link"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#appliances" class="nav-link"><i class="fas fa-tv"></i> Appliances</a></li>
+                <li><a href="#books" class="nav-link"><i class="fas fa-book"></i> Books</a></li>
+                <li><a href="#offers" class="nav-link"><i class="fas fa-gift"></i> Offers</a></li>
+                <li class="mobile-menu-btn">
+                    <button id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Banner -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-slider">
+                    <div class="hero-slide active">
+                        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Big Sale Banner" class="hero-image">
+                        <div class="hero-overlay">
+                            <h1>Great Indian Festival</h1>
+                            <p>Up to 70% Off on All Products</p>
+                            <a href="#products" class="btn btn-hero">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="mobiles">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobiles</h3>
+                        <p>Smartphones & Tablets</p>
+                    </div>
+                    <div class="category-card" data-category="laptops">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Laptops</h3>
+                        <p>Computers & Accessories</p>
+                    </div>
+                    <div class="category-card" data-category="fashion">
+                        <div class="category-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Fashion</h3>
+                        <p>Clothing & Accessories</p>
+                    </div>
+                    <div class="category-card" data-category="electronics">
+                        <div class="category-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3>Electronics</h3>
+                        <p>Gadgets & Devices</p>
+                    </div>
+                    <div class="category-card" data-category="home">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home</h3>
+                        <p>Furniture & Decor</p>
+                    </div>
+                    <div class="category-card" data-category="beauty">
+                        <div class="category-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Beauty</h3>
+                        <p>Cosmetics & Care</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals of the Day -->
+        <section class="deals-section" id="offers">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Deals of the Day</h2>
+                    <div class="deal-timer">
+                        <span class="timer-label">Ends in:</span>
+                        <div class="timer">
+                            <span class="hours">12</span>:<span class="minutes">45</span>:<span class="seconds">30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals-grid" id="dealsGrid">
+                    <!-- Deals loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Products</h2>
+                    <div class="filter-controls">
+                        <select class="filter-select" id="sortSelect">
+                            <option value="popular">Sort by: Popularity</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Banners -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-grid">
+                    <div class="banner-card">
+                        <div class="banner-content">
+                            <h3>Free Delivery</h3>
+                            <p>On orders above ₹999</p>
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                    </div>
+                    <div class="banner-card">
+                        <div class="banner-content">
+                            <h3>Easy Returns</h3>
+                            <p>30 Days Return Policy</p>
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                    </div>
+                    <div class="banner-card">
+                        <div class="banner-content">
+                            <h3>Secure Payments</h3>
+                            <p>100% Secure & Safe</p>
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Stories</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>POLICY</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>SOCIAL</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Mail Us</h3>
+                    <p>ShopEasy Internet Private Limited,</p>
+                    <p>Buildings Alyssa, Begonia &</p>
+                    <p>Clove Embassy Tech Village,</p>
+                    <p>Bangalore, Karnataka 560103</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 ShopEasy.com. All rights reserved.</p>
+                </div>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fab fa-google-pay" title="Google Pay"></i>
+                    <i class="fab fa-apple-pay" title="Apple Pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2>Login Required</h2>
+            <p>You need to login to add items to cart or make purchases.</p>
+            <div class="modal-actions">
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="signup.html" class="btn btn-secondary">Create Account</a>
+                <button class="btn btn-ghost close-modal-btn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content quick-view-content">
+            <span class="close-modal">&times;</span>
+            <div id="quickViewContent"></div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

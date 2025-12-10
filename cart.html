@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - ShopEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="welcome-text">
+                    <i class="fas fa-shopping-bag"></i>
+                    Welcome to ShopEasy - India's Online Marketplace
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+                    <a href="#"><i class="fas fa-headset"></i> 24x7 Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Shop<span>Easy</span></span>
+                            <span class="tagline">India's Online Store</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for products, brands and more" class="search-input">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <div class="auth-section" id="authSection">
+                        <!-- Will be updated by JS -->
+                    </div>
+                    <div class="cart-section">
+                        <a href="cart.html" class="cart-btn active">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                            <span class="cart-text">Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#mobiles" class="nav-link"><i class="fas fa-mobile-alt"></i> Mobiles</a></li>
+                <li><a href="#electronics" class="nav-link"><i class="fas fa-laptop"></i> Electronics</a></li>
+                <li><a href="#fashion" class="nav-link"><i class="fas fa-tshirt"></i> Fashion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Page -->
+    <main class="cart-page">
+        <div class="container">
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h1>Shopping Cart</h1>
+                        <span class="item-count" id="itemCount">0 items</span>
+                    </div>
+                    
+                    <div class="cart-empty" id="cartEmpty">
+                        <div class="empty-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h2>Your cart is empty</h2>
+                        <p>Add items to your cart and they will appear here</p>
+                        <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                    </div>
+                    
+                    <div class="cart-list" id="cartList">
+                        <!-- Cart items loaded by JS -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h2>Price Details</h2>
+                        <div class="price-breakup">
+                            <div class="price-row">
+                                <span>Price (0 items)</span>
+                                <span id="totalPrice">₹0</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Discount</span>
+                                <span class="discount-amount" id="totalDiscount">-₹0</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Delivery Charges</span>
+                                <span class="delivery-charge" id="deliveryCharge">₹40</span>
+                            </div>
+                            <div class="price-row total">
+                                <span>Total Amount</span>
+                                <span id="finalAmount">₹0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="savings-info">
+                            <i class="fas fa-check-circle"></i>
+                            <span>You will save ₹<span id="totalSavings">0</span> on this order</span>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-checkout" id="checkoutBtn">
+                            Proceed to Checkout
+                        </button>
+                        
+                        <div class="payment-options">
+                            <h3>We accept</h3>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fab fa-google-pay"></i>
+                                <i class="fab fa-apple-pay"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>POLICY</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 ShopEasy.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2>Login Required</h2>
+            <p>You need to login to proceed to checkout.</p>
+            <div class="modal-actions">
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="signup.html" class="btn btn-secondary">Create Account</a>
+                <button class="btn btn-ghost close-modal-btn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
